@@ -1,0 +1,44 @@
+profile:
+  name: Your Name
+  email: you@example.com
+  phone: "+00 0000000000"
+  current_role: Software Engineer
+  experience_years: 3
+  skills:
+    - Python
+    - FastAPI
+    - SQL
+  linkedin_url: https://www.linkedin.com/in/your-profile
+  github_url: https://github.com/your-username
+  resume_path: data/resume.md
+
+search:
+  target_roles:
+    - Software Engineer
+    - Python Developer
+  locations:
+    - Remote
+  minimum_salary_lpa: 0
+  blacklisted_companies: []
+  review_threshold: 70
+  daily_apply_limit: 15
+  follow_up_days: 7
+
+sources:
+  gmail:
+    enabled: false
+    query: 'from:(linkedin.com OR indeed.com) newer_than:7d'
+  greenhouse:
+    enabled: false
+    board_tokens: []
+  lever:
+    enabled: false
+    company_slugs: []
+  adzuna:
+    enabled: false
+    country: us
+  remoteok:
+    enabled: false
+
+database_path: data/job_agent.sqlite3
+artifacts_dir: data/artifacts

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-application-assistant"
+version = "0.1.0"
+description = "Human-approved job discovery and application assistant"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "PyYAML>=6.0,<7",
+  "python-dotenv>=1.0,<2",
+  "httpx>=0.27,<1",
+  "openai>=1.80,<3",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "jinja2>=3.1,<4",
+  "python-multipart>=0.0.9,<1",
+  "playwright>=1.50,<2",
+  "reportlab>=4.2,<5",
+  "google-api-python-client>=2.0,<3",
+  "google-auth-oauthlib>=1.2,<2",
+  "APScheduler>=3.10,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+job-agent = "job_agent.cli:main"
+job-agent-dashboard = "job_agent.dashboard.run:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"job_agent.dashboard" = ["styles.css"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

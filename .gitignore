@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+preferences.yaml
+data/job_agent.sqlite3
+data/browser-profile/
+data/oauth-token.json
+data/google-oauth-client.json
+data/artifacts/
+data/resume.md
+data/resume.pdf
+
